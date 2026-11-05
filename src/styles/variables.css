@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Lobster&family=Nunito:wght@400;500;600;700;800&family=Pattaya&display=swap');
+
+:root {
+  --color-ink: #754779;
+  --color-ink-dark: #704174;
+  --color-pink: #f9e9e5;
+  --color-pink-deep: #e7cbdc;
+  --color-lilac: #cbb2e5;
+  --color-paper: #fff7f3;
+  --color-muted: #a17b9a;
+  --color-line: #c594bd;
+  --font-body: 'Nunito', Candara, 'Trebuchet MS', Arial, sans-serif;
+  --font-display: 'Lobster', 'Brush Script MT', 'Segoe Script', cursive;
+  --soft-shadow: 0 3px 15px rgb(86 69 76 / 20%);
+}
