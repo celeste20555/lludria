@@ -54,7 +54,13 @@
 .PromoCard--free:after { content: ''; position: absolute; z-index: 0; inset: auto 0 0; height: 48px; background: url('../../img/footer-cloud.png') center bottom / 100% 48px no-repeat; opacity: .25; pointer-events: none; }
 .PromoCard--free h3,.PromoCard--free p,.PromoCard--free a { position: relative; z-index: 1; }
 .PromoCard__yarn { position: absolute; z-index: 1; right: 35px; bottom: 26px; width: 80px; height: 80px; object-fit: contain; }
-.PromoCard--exclusive { background: repeating-linear-gradient(58deg,#d5b9cb 0 20px,#cfb0c5 21px 39px,#dfc8d6 40px 60px); }
+.PromoCard--exclusive { background: #d9c1ce url('../../img/promo-exclusive-pattern.svg') center / cover; }
+.PromoCard--exclusive { display: flex; flex-direction: column; justify-content: center; padding-top: 20px; padding-bottom: 20px; }
+.PromoCard--exclusive h3 { margin-bottom: 12px; }
+.PromoCard__product { width: min(100%, 360px); margin: 0 auto; }
+.PromoCard__arrow { position: absolute; top: 59%; color: #704274; font: 46px/1 var(--font-body); transform: translateY(-50%); }
+.PromoCard__arrow--left { left: max(6px, calc((100% - 360px) / 2 - 38px)); }
+.PromoCard__arrow--right { right: max(6px, calc((100% - 360px) / 2 - 38px)); }
 .MiniProduct { width: min(74%,470px); height: 164px; margin: 0 auto; display: flex; background: #fffafa; border-radius: 7px; overflow: hidden; box-shadow: 0 2px 8px rgb(85 64 87 / 19%); font-size: 14px; }
 .MiniProduct .Product__image { width: 42%; flex-basis: 42%; }
 .MiniProduct > div:last-child { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
@@ -126,6 +132,10 @@
   .PromoCard a { min-width: 68px; padding: 5px 8px; }
   .PromoCard__yarn { width: 40px; height: 40px; right: 4px; bottom: 4px; }
   .MiniProduct { width: 85%; height: 65px; font-size: 6px; }
+  .PromoCard__product { width: min(100%, 220px); height: 65px; }
+  .PromoCard__arrow { top: 62%; font-size: 25px; }
+  .PromoCard__arrow--left { left: max(3px, calc((100% - 220px) / 2 - 24px)); }
+  .PromoCard__arrow--right { right: max(3px, calc((100% - 220px) / 2 - 24px)); }
   .MiniProduct > div:last-child { padding: 5px 3px; }
   .About { min-height: 155px; padding: 16px; margin: 18px 0; border-radius: 10px; }
   .About h3 { font-size: 14px; margin-bottom: 6px; }
