@@ -1,0 +1,59 @@
+.InfoPage { padding: 24px 3.2% 40px; display: flex; flex-direction: column; gap: 24px; background: #fff7f3; color: #714574; }
+.InfoPage__title { min-height: 0; display: block; text-align: center; }
+.InfoPage__title-art { display: block; width: min(100%,1024px); height: auto; margin: 0 auto; }
+.InfoStory { min-height: 250px; padding: 26px 30px; display: grid; grid-template-columns: 1fr 180px; align-items: center; gap: 28px; border-radius: 16px; background: #f0e6fa; box-shadow: 0 3px 12px rgb(88 70 78 / 17%); }
+.InfoStory > div { padding-right: 28px; border-right: 1px solid #987391; }
+.InfoStory h2,.InfoName h2,.InfoAbout h2 { margin: 0 0 12px; color: #704274; font: 700 clamp(24px,2.7vw,32px)/1.2 'Jua', var(--font-body); }
+.InfoStory h2 { text-align: center; }
+.InfoStory p,.InfoName p,.InfoAbout p { margin: 0; font-size: clamp(16px,1.55vw,19px); line-height: 1.55; }
+.InfoStory > img { width: 160px; height: 160px; border-radius: 3px; object-fit: contain; }
+.InfoValues { padding: 30px 30px 38px; border-radius: 17px; background: linear-gradient(180deg,#f3e9fa 0%,#f1dce9 100%); box-shadow: 0 3px 12px rgb(88 70 78 / 17%); }
+.InfoValues > h2 { display: flex; align-items: center; gap: 18px; margin: 0 0 36px; color: #704274; font: italic 400 clamp(34px,3.5vw,48px)/1.2 'Pattaya', var(--font-display); text-align: center; }
+.InfoValues > h2::before,.InfoValues > h2::after { content: ''; height: 12px; flex: 1; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='14' viewBox='0 0 120 14'%3E%3Cpath d='M0 7 Q10 0 20 7 T40 7 T60 7 T80 7 T100 7 T120 7' fill='none' stroke='%23704574' stroke-width='1.5'/%3E%3C/svg%3E") center / 120px 14px repeat-x; }
+.InfoValues__grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(28px,7vw,100px); padding: 0 30px; }
+.InfoValueCard { min-height: 380px; padding: 30px 26px; display: flex; flex-direction: column; align-items: center; text-align: center; border-radius: 22px; background: #fffafa; box-shadow: 0 5px 20px rgb(85 64 87 / 19%); transition: transform 240ms ease, box-shadow 240ms ease; transform-origin: center; }
+.InfoValueCard svg { width: 100px; height: 100px; margin-bottom: 10px; fill: none; stroke: #79517c; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.InfoValueCard h3 { margin: 0 0 8px; color: #704274; font: 700 clamp(24px,2.3vw,32px)/1.2 'Jua', var(--font-body); }
+.InfoValueCard p { max-width: 290px; margin: 0; font-size: clamp(16px,1.45vw,20px); line-height: 1.5; text-align: left; }
+.InfoValueCard:hover,.InfoValueCard:focus-within { z-index: 1; transform: scale(1.055) translateY(-5px); box-shadow: 0 12px 28px rgb(85 64 87 / 26%); }
+.InfoName { display: grid; grid-template-columns: 2fr 1fr; align-items: stretch; gap: 14px; }
+.InfoName__copy { position: relative; min-height: 0; padding: 24px 5%; overflow: hidden; border-radius: 20px; background: #f2dfea; box-shadow: 0 3px 12px rgb(88 70 78 / 14%); }
+.InfoName__copy::after { content: ''; position: absolute; z-index: 0; inset: auto 0 0; height: 145px; background: url('../../img/footer-cloud.png') center bottom / auto 145px repeat-x; opacity: .62; transform: scaleY(-1); pointer-events: none; }
+.InfoName__copy > * { position: relative; z-index: 1; }
+.InfoName__copy h2 { margin-bottom: 16px; text-align: center; font-size: clamp(26px,3.5vw,46px); }
+.InfoName__copy p { padding: 0 2%; font-size: clamp(17px,2.2vw,28px); line-height: 1.5; }
+.InfoName__quote { width: 100%; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 15px; background: #e4c6da; box-shadow: 0 3px 12px rgb(88 70 78 / 14%); }
+.InfoName__quote img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.InfoAbout { min-height: clamp(280px,32vw,430px); padding: 30px 4%; display: grid; grid-template-columns: minmax(0,1fr) minmax(250px,30%); align-items: center; gap: 28px; border-radius: 18px; background: #f0e6fa; box-shadow: 0 3px 12px rgb(88 70 78 / 17%); }
+.InfoAbout h2 { margin-bottom: 18px; font-size: clamp(28px,3.5vw,46px); }
+.InfoAbout p { font-size: clamp(18px,2.2vw,30px); line-height: 1.5; }
+.InfoAbout img { width: 100%; height: 100%; max-height: 350px; object-fit: contain; }
+
+@media (max-width: 700px) {
+  .InfoPage { padding: 12px 12px 96px; gap: 14px; }
+  .InfoPage__title { min-height: 0; }
+  .InfoPage__title-art { width: 100%; height: auto; }
+  .InfoStory { min-height: 118px; padding: 12px 10px; grid-template-columns: 1fr 78px; gap: 10px; border-radius: 8px; }
+  .InfoStory > div { padding-right: 9px; }
+  .InfoStory h2,.InfoName h2,.InfoAbout h2 { margin-bottom: 5px; font-size: 13px; }
+  .InfoStory p,.InfoName p,.InfoAbout p { font-size: 8px; line-height: 1.45; }
+  .InfoStory > img { width: 70px; height: 70px; }
+  .InfoValues { padding: 10px 8px 12px; border-radius: 8px; }
+  .InfoValues > h2 { gap: 5px; margin-bottom: 10px; font-size: 15px; }
+  .InfoValues > h2::before,.InfoValues > h2::after { height: 8px; background-size: 75px 9px; }
+  .InfoValues__grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; padding: 0; }
+  .InfoValueCard { min-height: 93px; padding: 8px 5px; border-radius: 7px; }
+  .InfoValueCard svg { width: 31px; height: 31px; margin-bottom: 3px; stroke-width: 2.8; }
+  .InfoValueCard h3 { margin-bottom: 3px; font-size: 9px; }
+  .InfoValueCard p { font-size: 6px; line-height: 1.3; }
+  .InfoName { grid-template-columns: 2fr 1fr; gap: 6px; }
+  .InfoName__copy { min-height: 0; padding: 9px; border-radius: 7px; }
+  .InfoName__copy::after { height: 38px; background-size: auto 38px; opacity: .62; }
+  .InfoName__quote { min-height: 0; padding: 0; border-radius: 7px; }
+  .InfoName__copy h2 { font-size: 11px; }
+  .InfoName__copy p { padding: 0; }
+  .InfoAbout { min-height: 150px; padding: 12px 14px; grid-template-columns: 1fr 82px; gap: 8px; border-radius: 8px; }
+  .InfoAbout h2 { margin-bottom: 5px; font-size: 13px; }
+  .InfoAbout p { font-size: 8px; line-height: 1.45; }
+  .InfoAbout img { width: 78px; height: 95px; }
+}

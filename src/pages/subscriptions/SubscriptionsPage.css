@@ -1,0 +1,55 @@
+.SubscriptionsPage { min-height: 650px; padding: 28px 8.5% 54px; background: #fff7f3; color: #714574; }
+.SubscriptionsPage__heading { margin: 0 auto 46px; text-align: center; }
+.SubscriptionsPage__heading h1 { margin: 0 0 4px; color: #704274; font: italic 400 clamp(30px,3vw,40px)/1.2 'Pattaya', var(--font-display); }
+.SubscriptionsPage__heading p { margin: 0; color: #a17b9a; font-size: clamp(18px,1.8vw,26px); }
+.PlanGrid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); align-items: stretch; gap: clamp(24px,3.5vw,58px); max-width: 1320px; margin: 0 auto; }
+.PlanCard { position: relative; isolation: isolate; min-width: 0; min-height: 480px; padding: 24px 34px 30px; display: flex; flex-direction: column; align-items: center; border: 0; border-radius: 0; background: transparent; filter: drop-shadow(0 3px 7px rgb(88 70 78 / 12%)); text-align: center; }
+.PlanCard__shape { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; object-fit: fill; pointer-events: none; }
+.PlanCard--popular { transform: translateY(-3px); }
+.PlanCard--popular::before { border: 2px solid #c5a6c2; background: #f7eaf2; }
+.PlanCard__badge { position: absolute; top: -20px; left: 50%; z-index: 1; min-width: 185px; padding: 5px 18px; transform: translateX(-50%); border-radius: 99px; background: #936e96; color: #fff; font: italic 400 20px/1.2 'Pattaya', var(--font-display); }
+.PlanCard__art { width: 78px; height: 82px; margin-bottom: 4px; object-fit: contain; }
+.PlanCard__art--yarn { padding: 2px; }
+.PlanCard h2 { margin: 0; color: #b78eaf; font: italic 400 clamp(31px,3vw,42px)/1.1 'Pattaya', var(--font-display); }
+.PlanCard__description { margin: 4px 0 9px; color: #d0afc7; font-size: clamp(17px,1.55vw,23px); line-height: 1.2; white-space: nowrap; }
+.PlanCard__price { margin: 0; color: #a77e9f; line-height: 1.2; }
+.PlanCard__price strong { font-size: clamp(24px,2vw,32px); }
+.PlanCard__price span { font-size: clamp(16px,1.5vw,22px); }
+.PlanCard__divider { position: relative; width: 100%; height: 20px; margin: 16px 0 7px; border-top: 1px solid #e9b4c5; }
+.PlanCard__divider span { position: absolute; top: -14px; left: 50%; padding: 0 7px; transform: translateX(-50%); background: #fbf0ec; color: #a77e9f; font-size: 23px; line-height: 1; }
+.PlanCard--popular .PlanCard__divider span { background: #f3e6ec; }
+.PlanCard ul { width: 100%; margin: 0 0 14px; padding: 0; display: flex; flex-direction: column; gap: 11px; list-style: none; text-align: left; }
+.PlanCard li { min-height: 31px; display: flex; align-items: center; gap: 10px; color: #d0afc7; font-size: clamp(14px,1.35vw,19px); line-height: 1.25; }
+.PlanCard li > img,.PlanCard li > svg { width: 31px; height: 31px; flex: 0 0 31px; object-fit: contain; fill: none; stroke: #936e96; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.PlanCard__subscribe { min-height: 40px; min-width: 170px; margin: auto auto 0; padding: 5px 16px; border: 0; border-radius: 99px; background: #e6c8dc; color: #9c7195; font: italic 400 22px/1.1 'Pattaya', var(--font-display); cursor: pointer; }
+.PlanCard--popular .PlanCard__subscribe { background: #936e96; color: #fff; }
+.PlanCard__subscribe:hover { filter: brightness(.96); }
+
+@media (max-width: 900px) {
+  .SubscriptionsPage { padding-left: 5%; padding-right: 5%; }
+  .PlanGrid { gap: 18px; }
+  .PlanCard { padding-left: 20px; padding-right: 20px; }
+  .PlanCard__description { white-space: normal; }
+}
+
+@media (max-width: 700px) {
+  .SubscriptionsPage { min-height: 0; padding: 18px 16px 96px; }
+  .SubscriptionsPage__heading { margin-bottom: 28px; }
+  .SubscriptionsPage__heading h1 { font-size: 24px; }
+  .SubscriptionsPage__heading p { font-size: 12px; }
+  .PlanGrid { grid-template-columns: 1fr; gap: 22px; max-width: 360px; }
+  .PlanCard { min-height: 190px; padding: 14px 20px 16px; border-radius: 9px 9px 20px 20px; }
+  .PlanCard--popular { transform: none; }
+  .PlanCard__badge { top: -11px; min-width: 112px; padding: 3px 9px; font-size: 12px; }
+  .PlanCard__art { width: 42px; height: 43px; margin-bottom: 1px; }
+  .PlanCard h2 { font-size: 21px; }
+  .PlanCard__description { margin: 2px 0 4px; font-size: 10px; }
+  .PlanCard__price strong { font-size: 18px; }
+  .PlanCard__price span { font-size: 11px; }
+  .PlanCard__divider { height: 10px; margin: 5px 0 3px; }
+  .PlanCard__divider span { top: -11px; font-size: 17px; }
+  .PlanCard ul { gap: 4px; margin-bottom: 7px; }
+  .PlanCard li { min-height: 17px; gap: 6px; font-size: 8px; }
+  .PlanCard li > img,.PlanCard li > svg { width: 15px; height: 15px; flex-basis: 15px; }
+  .PlanCard__subscribe { min-height: 23px; min-width: 105px; font-size: 12px; }
+}

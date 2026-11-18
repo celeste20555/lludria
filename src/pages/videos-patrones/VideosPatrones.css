@@ -1,0 +1,138 @@
+.VideosPage { padding-top: 28px; }
+.VideosHero { min-height: 174px; margin-bottom: 28px; padding: 24px 5%; display: flex; align-items: center; gap: 20px; position: relative; overflow: hidden; border-radius: 14px; background: #eadcf0; box-shadow: 0 3px 12px rgb(88 70 78 / 16%); }
+.VideosHero__play { width: 58px; height: 58px; flex: 0 0 auto; display: grid; place-items: center; border: 3px solid #704274; border-radius: 50%; font-size: 32px; line-height: 1; padding-left: 4px; }
+.VideosHero h1 { margin: 0 0 4px; font: 700 clamp(28px,3vw,38px)/1.2 'Jua', var(--font-body); color: #704274; }
+.VideosHero p { margin: 0; font-size: clamp(14px,1.5vw,18px); line-height: 1.35; }
+.VideosHero img { width: 165px; height: 150px; margin-left: auto; object-fit: contain; align-self: flex-end; }
+.VideosFeatured { margin: 0 0 28px; }
+.VideosSectionTitle { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; color: #704274; }
+.VideosSectionTitle__play { width: 31px; height: 31px; flex: 0 0 auto; display: grid; place-items: center; border: 2px solid currentColor; border-radius: 50%; font-size: 20px; line-height: 1; padding-left: 2px; }
+.VideosSectionTitle h2 { margin: 0; font: italic 400 clamp(24px,3vw,32px)/1.1 'Pattaya', var(--font-display); white-space: nowrap; }
+.VideosSectionTitle__line { height: 1px; flex: 1; background: #a67ca0; }
+.VideosSectionTitle a,.VideoPatternsSection__all { color: #987391; font-size: 12px; text-decoration: none; white-space: nowrap; }
+.VideoGrid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 16px; }
+.VideoCard { min-width: 0; overflow: hidden; border-radius: 9px; background: #fffafa; box-shadow: 0 2px 8px rgb(85 64 87 / 16%); }
+.VideoCard__image { position: relative; aspect-ratio: 1.26; overflow: hidden; background: #e8d9ef; }
+.VideoCard__image img { width: 100%; height: 100%; object-fit: cover; display: block; border: 0; outline: 0; transform: scale(1.02); }
+.VideoCard__image > span { position: absolute; inset: 50% auto auto 50%; width: clamp(42px,5.5vw,80px); height: clamp(42px,5.5vw,80px); display: grid; place-items: center; padding: 0 0 3px 4px; transform: translate(-50%,-50%); border: clamp(2px,.5vw,4px) solid #fff; border-radius: 50%; background: transparent; color: #fff; font-size: clamp(23px,3vw,42px); line-height: 1; }
+.VideoCard__details { min-height: 105px; padding: 14px 12px 16px; }
+.VideoCard h3 { margin: 0 0 8px; color: #704274; font: 700 clamp(14px,1.6vw,20px)/1.35 var(--font-body); }
+.VideoCard small { display: inline-block; padding: 3px 12px; border-radius: 99px; background: #ddc4da; color: #704274; font-size: clamp(10px,1.1vw,14px); font-weight: 700; line-height: 1.2; }
+.LessonPanel { margin: 0 0 34px; padding: 28px 40px 34px; border-radius: 17px; background: #eadcf0; box-shadow: 0 3px 14px rgb(88 70 78 / 18%); }
+.LessonPanel h2 { display: flex; align-items: center; gap: 12px; margin: 0 0 24px; font: italic 400 clamp(30px,3.6vw,43px)/1.15 'Pattaya', var(--font-display); white-space: nowrap; }
+.LessonPanel h2::after { content: ''; height: 2px; flex: 1; margin-left: 2px; background: #8d638e; }
+.LessonPanel h2 > svg { width: 62px; height: 52px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
+.LessonPanel__grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 34px; padding: 0 8px; }
+.LessonCard { min-height: 220px; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border-radius: 20px; background: #fffafa; box-shadow: 0 4px 18px rgb(85 64 87 / 18%); transition: transform 220ms ease, box-shadow 220ms ease; transform-origin: center; }
+.LessonCard__icon { width: 78px; height: 82px; object-fit: contain; fill: none; stroke: #79517c; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.LessonCard h3 { margin: 10px 0 5px; color: #704274; font: 700 clamp(20px,2vw,27px)/1.2 var(--font-body); }
+.LessonCard p { max-width: 190px; margin: 0; font-size: clamp(14px,1.35vw,18px); font-weight: 600; line-height: 1.5; }
+.LessonCard:hover,.LessonCard:focus-within { z-index: 1; transform: scale(1.055) translateY(-4px); box-shadow: 0 10px 24px rgb(85 64 87 / 24%); }
+.VideosPatternTitle { margin: 0 auto 24px; }
+.VideosPatternTitle h2 { font-size: clamp(34px,4vw,48px); }
+.VideosPatternTitle p { margin-top: 2px; font-size: 16px; }
+.VideoPatternsSection { margin-bottom: 30px; padding: 20px 14px 22px; }
+.VideoPatternsSection h3 { margin-bottom: 16px; }
+.VideoPatternsSection--free { padding: 28px 14px 32px; }
+.VideoPatternsSection--free h3 { margin: 0 0 22px; }
+.VideoPatternsSection__all { position: absolute; top: 23px; right: 20px; }
+.VideoPatternsGrid { display: grid; gap: 14px; }
+.VideoPatternsGrid--free { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.VideoPatternsGrid--paid { grid-template-columns: repeat(5,minmax(0,1fr)); }
+.VideoPatternsSection--paid { padding: 28px 26px 32px; }
+.VideoPatternsSection--paid h3 { margin-bottom: 22px; }
+.VideoPatternsSection--paid .VideoPatternsSection__all { top: 26px; right: 28px; padding: 3px 12px; border: 1px solid #c7a7c0; border-radius: 99px; background: #fffafa; }
+.VideoPatternsGrid--paid { gap: clamp(14px,3.2vw,42px); padding: 0 14px; }
+.VideoSaleCard { min-width: 0; overflow: hidden; border-radius: 9px; background: #fffafa; box-shadow: 0 4px 12px rgb(85 64 87 / 16%); }
+.VideoSaleCard__image { position: relative; aspect-ratio: 1.04; overflow: hidden; background: #e8d9ef; }
+.VideoSaleCard__image img { width: 100%; height: 100%; object-fit: cover; display: block; border: 0; outline: 0; transform: scale(1.02); }
+.VideoSaleCard__heart { position: absolute; top: 5px; right: 8px; color: #704274; font: 26px/1 var(--font-body); text-shadow: 0 1px 2px #fff; }
+.VideoSaleCard__details { min-height: 100px; padding: 8px 7px 12px; display: flex; flex-direction: column; align-items: flex-start; }
+.VideoSaleCard__details h4 { width: 100%; min-height: 21px; overflow: hidden; margin: 0 0 7px; color: #704274; font: 700 clamp(12px,1.3vw,16px)/1.25 var(--font-body); white-space: nowrap; text-overflow: ellipsis; }
+.VideoSaleCard__details small { padding: 1px 9px; border-radius: 99px; background: #ddc4da; color: #704274; font-size: 10px; line-height: 1.2; }
+.VideoSaleCard__details button { width: 62%; min-height: 25px; margin: auto auto 0; padding: 3px 8px; border: 0; border-radius: 5px; background: #9c6d98; color: #fff; font: 500 13px/1.2 var(--font-body); cursor: pointer; }
+.VideoSaleCard__details button:hover { background: #845881; }
+.VideoPatternCard { height: clamp(145px,17vw,178px); }
+.VideoPatternsGrid--free .VideoPatternCard { height: clamp(150px,17vw,178px); }
+.VideoPatternCard .Product__image { width: 45%; flex-basis: 45%; }
+.VideoPatternCard .Product__details { padding: 8px 7px; gap: 4px; font-size: clamp(10px,1.1vw,13px); }
+.VideoPatternCard .Product__details b { line-height: 1.15; }
+.VideoPatternCard .Product__details small { font-size: clamp(8px,.9vw,11px); }
+.VideoPatternCard .Product__details strong { font-size: 14px; }
+.VideoPatternCard .Product__tag { font-size: 9px !important; }
+.VideoPatternCard .Product__all { font-size: 11px; }
+.VideoPatternCard .Product__heart { right: 6px; top: 3px; font-size: 19px; }
+.VideoPatternCard--free .Product__details { padding-top: 8px; }
+
+@media (max-width: 700px) {
+  .VideosPage { padding: 14px 12px 96px; }
+  .VideosHero { min-height: 88px; margin-bottom: 16px; padding: 12px; gap: 9px; border-radius: 8px; }
+  .VideosHero__play { width: 32px; height: 32px; border-width: 2px; font-size: 18px; padding-left: 2px; }
+  .VideosHero h1 { margin-bottom: 2px; font-size: 18px; }
+  .VideosHero p { font-size: 8px; }
+  .VideosHero img { width: 72px; height: 68px; margin-right: 2px; }
+  .VideosFeatured { margin-bottom: 15px; }
+  .VideosSectionTitle { gap: 6px; margin-bottom: 8px; }
+  .VideosSectionTitle__play { width: 19px; height: 19px; border-width: 1px; font-size: 13px; }
+  .VideosSectionTitle h2 { font-size: 17px; }
+  .VideosSectionTitle a,.VideoPatternsSection__all { font-size: 7px; }
+  .VideoGrid { grid-auto-columns: calc((100% - 8px) / 2); grid-auto-flow: column; grid-template-columns: none; gap: 8px; overflow-x: auto; padding: 1px 2px 5px; scrollbar-width: none; scroll-snap-type: x mandatory; }
+  .VideoGrid::-webkit-scrollbar { display: none; }
+  .VideoCard { scroll-snap-align: start; }
+  .VideoCard { border-radius: 5px; }
+  .VideoCard__image { aspect-ratio: 1.1; }
+  .VideoCard__image > span { width: 24px; height: 24px; border-width: 2px; font-size: 13px; }
+  .VideoCard__details { min-height: 54px; padding: 5px 4px 6px; }
+  .VideoCard h3 { margin-bottom: 4px; font-size: 8px; line-height: 1.35; }
+  .VideoCard small { padding: 1px 5px; font-size: 6px; }
+  .LessonPanel { margin-bottom: 18px; padding: 12px 10px 14px; border-radius: 8px; }
+  .LessonPanel h2 { gap: 5px; margin-bottom: 10px; font-size: 15px; }
+  .LessonPanel h2::after { height: 1px; }
+  .LessonPanel h2 > svg { width: 25px; height: 22px; stroke-width: 3; }
+  .LessonPanel__grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; padding: 0 2px; }
+  .LessonCard { min-height: 78px; padding: 6px 3px; border-radius: 6px; }
+  .LessonCard__icon { width: 26px; height: 28px; stroke-width: 2.8; }
+  .LessonCard h3 { margin: 4px 0 2px; font-size: 8px; }
+  .LessonCard p { font-size: 6px; }
+  .VideosPatternTitle { gap: 6px; margin-bottom: 14px; }
+  .VideosPatternTitle .SectionTitle__yarn { width: 30px; height: 36px; }
+  .VideosPatternTitle h2 { font-size: 24px; }
+  .VideosPatternTitle p { font-size: 9px; }
+  .VideoPatternsSection { margin-bottom: 18px; padding: 10px 8px 12px; border-radius: 9px; }
+  .VideoPatternsSection h3 { margin-bottom: 8px; font-size: 14px; }
+  .VideoPatternsSection--free { padding: 12px 8px 14px; }
+  .VideoPatternsSection--free h3 { margin-bottom: 9px; }
+  .VideoPatternsGrid--free { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .VideoPatternsSection__all { top: 12px; right: 10px; }
+  .VideoPatternsGrid { gap: 6px; }
+  .VideoPatternCard,.VideoPatternsGrid--free .VideoPatternCard { height: 82px; border-radius: 4px; }
+  .VideoPatternCard .Product__image { width: 43%; flex-basis: 43%; }
+  .VideoPatternCard .Product__details { padding: 4px 3px; gap: 2px; font-size: 6px; }
+  .VideoPatternCard .Product__details small { font-size: 5px; }
+  .VideoPatternCard .Product__details strong { font-size: 7px; }
+  .VideoPatternCard .Product__tag { padding: 1px 4px; font-size: 5px !important; }
+  .VideoPatternCard .Product__all { font-size: 6px; }
+  .VideoPatternCard .Product__heart { right: 3px; top: 2px; font-size: 11px; }
+  .VideoPatternsGrid--paid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 7px; }
+  .VideoPatternsSection--paid { padding: 12px 8px 14px; }
+  .VideoPatternsSection--paid h3 { margin-bottom: 9px; }
+  .VideoPatternsSection--paid .VideoPatternsSection__all { top: 12px; right: 10px; padding: 1px 5px; font-size: 6px; }
+  .VideoPatternsGrid--paid { gap: 7px; padding: 0 2px; }
+  .VideoSaleCard { border-radius: 4px; }
+  .VideoSaleCard__image { aspect-ratio: .9; }
+  .VideoSaleCard__heart { top: 2px; right: 3px; font-size: 11px; }
+  .VideoSaleCard__details { min-height: 40px; padding: 4px 3px 5px; }
+  .VideoSaleCard__details h4 { min-height: 11px; margin-bottom: 3px; font-size: 5.5px; }
+  .VideoSaleCard__details small { padding: 1px 4px; font-size: 4px; }
+  .VideoSaleCard__details button { min-height: 10px; margin-top: 4px; padding: 1px 3px; border-radius: 2px; font-size: 5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .LessonCard { transition: none; }
+  .LessonCard:hover,.LessonCard:focus-within { transform: none; }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .VideoPatternsGrid--paid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .VideoPatternCard { height: 150px; }
+}

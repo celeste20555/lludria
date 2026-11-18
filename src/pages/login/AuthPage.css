@@ -1,0 +1,39 @@
+@import '../../styles/variables.css';
+
+.AuthPage { position: relative; display: grid; min-height: 100vh; place-items: center; overflow: hidden; isolation: isolate; padding: 32px 20px; background-image: linear-gradient(rgb(100 65 90 / 22%),rgb(100 65 90 / 22%)),var(--auth-background); background-position: center; background-size: cover; }
+.AuthPage::before { position: absolute; z-index: -1; inset: 0; background: rgb(249 231 231 / 24%); content: ''; }
+.AuthPage__back { position: absolute; z-index: 2; top: 22px; left: 24px; display: grid; width: 42px; height: 42px; place-items: center; padding: 0; border: 1px solid rgb(112 66 116 / 40%); border-radius: 50%; background: rgb(255 240 235 / 82%); color: #704274; cursor: pointer; transition: background-color .16s ease,transform .16s ease; }
+.AuthPage__back:hover { transform: translateX(-2px); background: #fff0eb; }
+.AuthPage__back svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.AuthPage__mascot { position: absolute; z-index: -1; bottom: -11%; left: -3%; width: min(55vw,620px); max-height: 88vh; object-fit: contain; object-position: left bottom; filter: drop-shadow(0 5px 8px rgb(68 38 68 / 18%)); }
+.AuthCard { position: relative; width: min(100%,390px); padding: 26px 44px 32px; border-radius: 10px; background: #fff0eb; box-shadow: 0 5px 20px rgb(65 42 55 / 20%); color: #373037; }
+.AuthCard--register { min-height: 410px; }
+.AuthCard--login { min-height: 385px; }
+.AuthCard__tabs { display: flex; align-items: center; justify-content: center; gap: 15px; margin: 0 0 18px; white-space: nowrap; }
+.AuthCard__tabs button { padding: 0; border: 0; background: transparent; color: #160f12; font: italic 700 23px/1.2 'Pattaya',var(--font-display); cursor: pointer; }
+.AuthCard__tabs button.is-active { color: #704274; }
+.AuthCard__tabs > span { color: #21181e; font: 600 22px/1 var(--font-body); }
+.AuthForm { display: flex; flex-direction: column; gap: 9px; }
+.AuthForm > label:not(.AuthForm__terms) { display: flex; flex-direction: column; gap: 4px; color: #4c4348; font: 400 13px/1.2 var(--font-body); }
+.AuthForm input:not([type='checkbox']) { width: 100%; height: 27px; padding: 5px 9px; border: 0; border-radius: 6px; outline-color: #a679a1; background: #dfc1ce; color: #49374a; font: 400 11px var(--font-body); }
+.AuthForm input::placeholder { color: #9c8792; }
+.AuthForm__password { position: relative; }
+.AuthForm__password input { padding-right: 30px !important; }
+.AuthForm__password button { position: absolute; top: 3px; right: 6px; width: 22px; height: 22px; padding: 0; border: 0; background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2371666e' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E") center/17px 17px no-repeat; color: #71666e; font-size: 0; cursor: pointer; }
+.AuthForm__password button svg { display: block; width: 17px; height: 17px; margin: auto; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.AuthForm__terms { display: flex; align-items: center; justify-content: center; gap: 6px; margin: -1px 0 3px; color: #51474c; font: 400 11px var(--font-body); }
+.AuthForm__terms input { width: 15px; height: 15px; margin: 0; accent-color: #a679a1; }
+.AuthForm__terms a { color: #c47f69; text-decoration: none; }
+.AuthForm__submit { align-self: center; width: 185px; min-height: 28px; margin-top: 2px; border: 0; border-radius: 6px; background: #e3b7bd; box-shadow: 0 2px 4px rgb(65 42 55 / 20%); color: #49383f; font: 400 14px var(--font-body); cursor: pointer; }
+.AuthForm--login { gap: 12px; }
+.AuthForm--login .AuthForm__forgot { align-self: center; margin-top: -5px; color: #704274; font: 400 10px var(--font-body); text-decoration: none; }
+.AuthForm--login .AuthForm__submit { margin: 0 0 12px; }
+.AuthForm__social { display: flex; min-height: 27px; align-items: center; justify-content: center; gap: 9px; border: 1px solid #ead1d7; border-radius: 6px; background: transparent; color: #5d5058; font: 400 14px var(--font-body); cursor: pointer; }
+.AuthForm__social b { color: #866290; font-size: 17px; }
+
+@media (max-width: 600px) {
+  .AuthPage { min-height: calc(100svh - 110px); padding: 18px 14px 92px; }
+  .AuthPage__back { top: 12px; left: 12px; width: 36px; height: 36px; }
+  .AuthPage__mascot { left: -21%; bottom: -7%; width: 85vw; opacity: .7; }
+  .AuthCard { z-index: 1; width: min(100%,390px); padding: 24px 32px 28px; }
+}
